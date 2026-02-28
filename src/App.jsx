@@ -23,23 +23,23 @@ export default function App() {
         <Hero />
 
         {/* Separador decorativo */}
-        <div className="relative h-px bg-gradient-to-r from-transparent via-ice-500/20 to-transparent" />
+        <div className="relative h-px bg-linear-to-r from-transparent via-ice-500/20 to-transparent" />
 
         <About />
 
-        <div className="relative h-px bg-gradient-to-r from-transparent via-accent-cyan/20 to-transparent" />
+        <div className="relative h-px bg-linear-to-r from-transparent via-accent-cyan/20 to-transparent" />
 
         <Skills />
 
-        <div className="relative h-px bg-gradient-to-r from-transparent via-accent-purple/20 to-transparent" />
+        <div className="relative h-px bg-linear-to-r from-transparent via-accent-purple/20 to-transparent" />
 
         <Methodology />
 
-        <div className="relative h-px bg-gradient-to-r from-transparent via-accent-teal/20 to-transparent" />
+        <div className="relative h-px bg-linear-to-r from-transparent via-accent-teal/20 to-transparent" />
 
         <Projects />
 
-        <div className="relative h-px bg-gradient-to-r from-transparent via-ice-500/20 to-transparent" />
+        <div className="relative h-px bg-linear-to-r from-transparent via-ice-500/20 to-transparent" />
 
         <Contact />
       </main>

@@ -3,12 +3,7 @@
 // Etiqueta pequeña para tecnologías y niveles
 // ============================================
 
-import { clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
+import { cn } from "../../lib/utils";
 
 const variantes = {
   default:
@@ -20,7 +15,7 @@ const variantes = {
   teal:
     "bg-accent-teal/10 text-accent-teal border-accent-teal/20",
   ai:
-    "bg-gradient-to-r from-accent-purple/20 to-ice-500/20 text-accent-purple border-accent-purple/30",
+    "bg-linear-to-r from-accent-purple/20 to-ice-500/20 text-accent-purple border-accent-purple/30",
 };
 
 export default function Badge({

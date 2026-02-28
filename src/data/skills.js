@@ -15,7 +15,6 @@ import {
   SiPostgresql,
   SiMysql,
   SiNodedotjs,
-  SiGit,
   SiAndroidstudio,
   SiKotlin,
   SiFigma,
@@ -64,7 +63,7 @@ export const categorias = [
 export const skills = [
   // Frontend
   { nombre: "React", icono: SiReact, categoria: "frontend", nivel: "Intermedio" },
-  { nombre: "Angular", icono: SiAngular, categoria: "frontend", nivel: "Basico" },
+  { nombre: "Angular", icono: SiAngular, categoria: "frontend", nivel: "Básico" },
   { nombre: "Tailwind CSS", icono: SiTailwindcss, categoria: "frontend", nivel: "Intermedio" },
   { nombre: "JavaScript", icono: SiJavascript, categoria: "frontend", nivel: "Intermedio" },
   { nombre: "TypeScript", icono: SiTypescript, categoria: "frontend", nivel: "Intermedio" },
@@ -87,10 +86,9 @@ export const skills = [
   // IA & Herramientas
   { nombre: "Git & GitHub", icono: SiGithub, categoria: "herramientas", nivel: "Intermedio" },
   { nombre: "AI Copilot", icono: HiOutlineSparkles, categoria: "herramientas", nivel: "Avanzado" },
-  {nombre: "Claude AI", icono: HiOutlineSparkles, categoria: "herramientas", nivel: "Avanzado" },
+  { nombre: "Claude AI", icono: HiOutlineSparkles, categoria: "herramientas", nivel: "Avanzado" },
   { nombre: "Figma", icono: SiFigma, categoria: "herramientas", nivel: "Intermedio" },
   { nombre: "Postman", icono: SiPostman, categoria: "herramientas", nivel: "Intermedio" },
-
 
   // Soft Skills
   { nombre: "Resolución de Problemas", icono: HiOutlinePuzzlePiece, categoria: "soft", nivel: "Nativo" },

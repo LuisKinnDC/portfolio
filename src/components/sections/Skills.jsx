@@ -16,6 +16,7 @@ const nivelesColor = {
   Nativo: "teal",
   Avanzado: "default",
   Intermedio: "accent",
+  "Básico": "purple",
 };
 
 export default function Skills() {
@@ -41,7 +42,7 @@ export default function Skills() {
             className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 cursor-pointer
               ${
                 categoriaActiva === cat.id
-                  ? "bg-gradient-to-r from-ice-500 to-ice-600 text-white shadow-lg shadow-ice-500/25"
+                  ? "bg-linear-to-r from-ice-500 to-ice-600 text-white shadow-lg shadow-ice-500/25"
                   : "bg-slate-850/60 text-text-secondary hover:text-white border border-ice-500/10 hover:border-ice-500/30"
               }
             `}

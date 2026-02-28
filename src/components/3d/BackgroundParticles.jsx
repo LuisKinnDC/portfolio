@@ -11,18 +11,16 @@ export default function BackgroundParticles({ count = 200 }) {
   const pointsRef = useRef();
 
   // Generar posiciones aleatorias de partículas
-  const particles = useMemo(() => {
-    const positions = new Float32Array(count * 3);
-    const sizes = new Float32Array(count);
+  const positions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
 
     for (let i = 0; i < count; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 20;     // x
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 20; // y
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 20; // z
-      sizes[i] = Math.random() * 2 + 0.5;
+      pos[i * 3] = (Math.random() - 0.5) * 20;     // x
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 20; // y
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 20; // z
     }
 
-    return { positions, sizes };
+    return pos;
   }, [count]);
 
   useFrame((state) => {
@@ -38,8 +36,8 @@ export default function BackgroundParticles({ count = 200 }) {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={particles.positions.length / 3}
-          array={particles.positions}
+          count={positions.length / 3}
+          array={positions}
           itemSize={3}
         />
       </bufferGeometry>

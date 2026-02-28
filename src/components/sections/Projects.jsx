@@ -38,7 +38,7 @@ export default function Projects() {
             className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 cursor-pointer
               ${
                 filtroActivo === filtro.id
-                  ? "bg-gradient-to-r from-ice-500 to-ice-600 text-white shadow-lg shadow-ice-500/25"
+                  ? "bg-linear-to-r from-ice-500 to-ice-600 text-white shadow-lg shadow-ice-500/25"
                   : "bg-slate-850/60 text-text-secondary hover:text-white border border-ice-500/10 hover:border-ice-500/30"
               }
             `}
@@ -65,7 +65,7 @@ export default function Projects() {
                 glow={false}
               >
                 {/* Imagen del proyecto (Freepik) */}
-                <div className="relative h-48 sm:h-56 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                <div className="relative h-48 sm:h-56 bg-linear-to-br from-slate-800 to-slate-900 overflow-hidden">
                   <img
                     src={proyecto.imagen}
                     alt={proyecto.titulo}
@@ -73,7 +73,7 @@ export default function Projects() {
                     loading="lazy"
                   />
                   {/* Overlay oscuro */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/40 to-transparent" />
 
                   {/* Badge AI-Augmented */}
                   {proyecto.aiAugmented && (
@@ -85,7 +85,7 @@ export default function Projects() {
                   )}
 
                   {/* Overlay en hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Contenido */}

@@ -110,7 +110,7 @@ export default function Header() {
 
         {/* Barra de progreso del scroll */}
         <motion.div
-          className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-ice-500 via-accent-cyan to-accent-teal"
+          className="absolute bottom-0 left-0 h-0.5 bg-linear-to-r from-ice-500 via-accent-cyan to-accent-teal"
           style={{ width: `${progress * 100}%` }}
         />
       </motion.header>

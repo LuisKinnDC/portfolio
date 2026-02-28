@@ -97,15 +97,32 @@ export default function Contact() {
 
     setEnviando(true);
 
-    // Simular envío (reemplazar con lógica real)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "50d41e72-a6b3-41a0-9cb3-52a77106b9de",
+          from_name: form.nombre,
+          replyto: form.email,
+          subject: `📩 ${form.nombre} te envió un mensaje desde tu Portafolio`,
+          Nombre: form.nombre,
+          Email: form.email,
+          Mensaje: form.mensaje,
+        }),
+      });
 
-    setEnviando(false);
-    setEnviado(true);
-    setForm({ nombre: "", email: "", mensaje: "" });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message);
 
-    // Resetear después de 5 segundos
-    setTimeout(() => setEnviado(false), 5000);
+      setEnviado(true);
+      setForm({ nombre: "", email: "", mensaje: "" });
+      setTimeout(() => setEnviado(false), 5000);
+    } catch {
+      setErrors({ general: "Error al enviar el mensaje. Intenta de nuevo." });
+    } finally {
+      setEnviando(false);
+    }
   };
 
   return (
@@ -124,7 +141,7 @@ export default function Contact() {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-slate-950/80" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ice-500/3 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-ice-500/3 rounded-full blur-[150px]" />
       </div>
 
       <div className="relative grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
@@ -302,7 +319,7 @@ export default function Contact() {
             })}
 
             {/* Mensaje motivacional */}
-            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-ice-500/5 to-accent-purple/5 border border-ice-500/10">
+            <div className="mt-8 p-6 rounded-2xl bg-linear-to-br from-ice-500/5 to-accent-purple/5 border border-ice-500/10">
               <p className="text-sm text-text-secondary leading-relaxed italic">
                 &ldquo;La mejor forma de predecir el futuro es construirlo.
                 Hablemos sobre cómo puedo ayudarte a materializar tus ideas.&rdquo;

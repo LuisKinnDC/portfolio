@@ -63,7 +63,7 @@ export default function Methodology() {
       {/* Timeline */}
       <div className="relative">
         {/* Línea vertical central (solo desktop) */}
-        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-ice-500/30 via-accent-purple/20 to-accent-teal/30 -translate-x-1/2" />
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-ice-500/30 via-accent-purple/20 to-accent-teal/30 -translate-x-1/2" />
 
         <div className="space-y-12 md:space-y-0">
           {pasos.map((paso, index) => {
@@ -84,7 +84,7 @@ export default function Methodology() {
                   {/* Nodo central en la línea */}
                   <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                     <motion.div
-                      className={`w-12 h-12 rounded-full bg-gradient-to-r ${paso.color} flex items-center justify-center shadow-lg ${paso.glowColor}`}
+                      className={`w-12 h-12 rounded-full bg-linear-to-r ${paso.color} flex items-center justify-center shadow-lg ${paso.glowColor}`}
                       whileInView={{ scale: [0, 1.2, 1] }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: index * 0.15 }}
@@ -111,7 +111,7 @@ export default function Methodology() {
                       >
                         {/* Icono */}
                         <div
-                          className={`w-14 h-14 rounded-2xl bg-gradient-to-r ${paso.color} bg-opacity-10 flex items-center justify-center shrink-0`}
+                          className={`w-14 h-14 rounded-2xl bg-linear-to-r ${paso.color} bg-opacity-10 flex items-center justify-center shrink-0`}
                           style={{ background: `linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(6, 182, 212, 0.1))` }}
                         >
                           <Icon className="w-7 h-7 text-ice-400" />

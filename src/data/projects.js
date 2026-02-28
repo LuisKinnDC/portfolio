@@ -59,7 +59,7 @@ export const proyectos = [
     demo: "https://biblioteca-virtual-recursos.vercel.app/",
     aiAugmented: true,
   },
-    {
+  {
     id: 5,
     titulo: "Gestión Documental Laboral",
     descripcion:

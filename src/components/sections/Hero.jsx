@@ -58,9 +58,9 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full object-cover opacity-20"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950/90" />
-        <div className="absolute top-0 left-1/3 w-[80vw] max-w-[500px] h-[80vw] max-h-[500px] bg-ice-500/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[70vw] max-w-[400px] h-[70vw] max-h-[400px] bg-accent-purple/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-linear-to-b from-slate-950/80 via-slate-950/60 to-slate-950/90" />
+        <div className="absolute top-0 left-1/3 w-[80vw] max-w-125 h-[80vw] max-h-125 bg-ice-500/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-[70vw] max-w-100 h-[70vw] max-h-100 bg-accent-purple/5 rounded-full blur-[100px]" />
       </div>
 
       {/* Escena 3D */}
@@ -68,11 +68,12 @@ export default function Hero() {
 
       {/* Contenido principal */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-3xl"
+          className="max-w-2xl flex-1"
         >
           {/* Badge superior */}
           <motion.div variants={itemVariants} className="mb-6">
@@ -140,6 +141,50 @@ export default function Hero() {
             ))}
           </motion.div>
         </motion.div>
+
+        {/* Foto de perfil */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="hidden lg:flex shrink-0"
+        >
+          <div className="relative">
+            {/* Glow detrás */}
+            <div className="absolute -inset-8 bg-linear-to-br from-ice-500/20 via-accent-cyan/10 to-accent-purple/20 rounded-2xl blur-3xl" />
+            {/* Borde gradiente tipo carnet */}
+            <div className="relative w-72 h-88 xl:w-80 xl:h-104 rounded-2xl p-0.75 bg-linear-to-br from-ice-500 via-accent-cyan to-accent-purple shadow-[0_0_60px_rgba(14,165,233,0.3)]">
+              <img
+                src="/foto-perfil.jpeg"
+                alt="Luis Kinn DC"
+                className="w-full h-full rounded-2xl object-cover"
+              />
+            </div>
+            {/* Burbuja de mensaje: Ing. Sistemas */}
+            <motion.div
+              animate={{ y: [-6, 6, -6] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-5 -right-8 flex flex-col items-end"
+            >
+              <div className="px-4 py-2 rounded-2xl rounded-br-sm bg-ice-500/15 border border-ice-500/30 backdrop-blur-md shadow-lg">
+                <span className="text-sm font-semibold text-ice-300 whitespace-nowrap">💻 Ing. Sistemas</span>
+              </div>
+              <div className="w-3 h-3 mr-2 -mt-0.5 bg-ice-500/15 border-r border-b border-ice-500/30 rotate-45" />
+            </motion.div>
+            {/* Burbuja de mensaje: Gamer */}
+            <motion.div
+              animate={{ y: [6, -6, 6] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-5 -left-8 flex flex-col items-start"
+            >
+              <div className="w-3 h-3 ml-2 -mb-0.5 bg-accent-purple/15 border-l border-t border-accent-purple/30 rotate-45" />
+              <div className="px-4 py-2 rounded-2xl rounded-tl-sm bg-accent-purple/15 border border-accent-purple/30 backdrop-blur-md shadow-lg">
+                <span className="text-sm font-semibold text-purple-300 whitespace-nowrap">🎮 Gamer & Streamer</span>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+        </div>
       </div>
 
       {/* Indicador de scroll */}

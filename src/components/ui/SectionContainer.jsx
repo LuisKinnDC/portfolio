@@ -31,7 +31,7 @@ export default function SectionContainer({
             )}
             {/* Línea decorativa inferior */}
             <div className="mt-6 flex justify-center">
-              <div className="w-20 h-1 rounded-full bg-gradient-to-r from-ice-500 to-accent-cyan" />
+              <div className="w-20 h-1 rounded-full bg-linear-to-r from-ice-500 to-accent-cyan" />
             </div>
           </FadeIn>
         )}

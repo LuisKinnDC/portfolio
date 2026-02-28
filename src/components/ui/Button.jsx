@@ -4,17 +4,11 @@
 // ============================================
 
 import { motion } from "framer-motion";
-import { clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-// Utilidad para combinar clases
-function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
+import { cn } from "../../lib/utils";
 
 const variantes = {
   primary:
-    "bg-gradient-to-r from-ice-500 to-ice-600 hover:from-ice-600 hover:to-ice-700 text-white shadow-lg shadow-ice-500/25",
+    "bg-linear-to-r from-ice-500 to-ice-600 hover:from-ice-600 hover:to-ice-700 text-white shadow-lg shadow-ice-500/25",
   secondary:
     "bg-slate-800/60 hover:bg-slate-800 text-text-secondary hover:text-white border border-ice-500/20 hover:border-ice-500/40",
   outline:

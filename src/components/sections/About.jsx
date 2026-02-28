@@ -77,9 +77,9 @@ export default function About() {
         <FadeIn direction="right">
           <div className="space-y-8">
             {/* Mockup visual / Terminal */}
-            <div className="relative aspect-square max-w-md mx-auto overflow-hidden">
+            <div className="relative aspect-square max-w-md mx-auto">
               {/* Marco decorativo */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-ice-500/20 via-transparent to-accent-purple/20 p-[1px]">
+              <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-ice-500/20 via-transparent to-accent-purple/20 p-px">
                 <div className="w-full h-full rounded-3xl bg-slate-900 flex items-center justify-center overflow-hidden">
                   <div className="w-full h-full p-8 flex flex-col justify-center">
                     <div className="space-y-3 font-mono text-sm">
@@ -124,17 +124,17 @@ export default function About() {
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-ice-500/10 border border-ice-500/20 backdrop-blur-sm flex items-center justify-center"
+                className="absolute top-2 right-2 w-14 h-14 rounded-2xl bg-ice-500/10 border border-ice-500/20 backdrop-blur-sm flex items-center justify-center z-10"
               >
-                <span className="text-2xl">💻</span>
+                <span className="text-xl">💻</span>
               </motion.div>
 
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 rounded-2xl bg-accent-purple/10 border border-accent-purple/20 backdrop-blur-sm flex items-center justify-center"
+                className="absolute bottom-2 left-2 w-14 h-14 rounded-2xl bg-accent-purple/10 border border-accent-purple/20 backdrop-blur-sm flex items-center justify-center z-10"
               >
-                <span className="text-2xl">🤖</span>
+                <span className="text-xl">🤖</span>
               </motion.div>
             </div>
 

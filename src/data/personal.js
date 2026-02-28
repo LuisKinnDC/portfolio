@@ -32,6 +32,4 @@ export const personal = {
     { valor: "IA", etiqueta: "Asistida en Desarrollo" },
   ],
 
-  // Footer
-  footer_badge: "Diseñado y desarrollado con React + Tailwind CSS + IA",
 };
