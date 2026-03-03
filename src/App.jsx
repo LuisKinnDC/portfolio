@@ -10,6 +10,7 @@ import About from "./components/sections/About";
 import Skills from "./components/sections/Skills";
 import Methodology from "./components/sections/Methodology";
 import Projects from "./components/sections/Projects";
+import Certifications from "./components/sections/Certifications";
 import Contact from "./components/sections/Contact";
 
 export default function App() {
@@ -38,6 +39,10 @@ export default function App() {
         <div className="relative h-px bg-linear-to-r from-transparent via-accent-teal/20 to-transparent" />
 
         <Projects />
+
+        <div className="relative h-px bg-linear-to-r from-transparent via-accent-purple/20 to-transparent" />
+
+        <Certifications />
 
         <div className="relative h-px bg-linear-to-r from-transparent via-ice-500/20 to-transparent" />
 
